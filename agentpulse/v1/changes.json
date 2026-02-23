@@ -1,5 +1,16 @@
 {
-  "version": "2.0",
-  "generated_at": "2026-02-23T06:00:00Z",
-  "changes": []
+  "version": "1.0",
+  "generated_at": "2026-02-23T13:38:44.178892Z",
+  "changes": [
+    {
+      "date": "2026-02-23",
+      "type": "initial_pricing_collection",
+      "details": "First image gen pricing collection: 7 services, range $0.0027-$0.134/image. Cheapest: Together AI Flux Schnell ($0.0027). Most expensive: Google Imagen 3 ($0.134)."
+    },
+    {
+      "date": "2026-02-23",
+      "type": "uptime_monitoring",
+      "details": "Health checks for 7 image generation services. 6 services at 100% uptime. Black Forest Labs Flux Pro showing 0% uptime (timeout issues on health endpoint)."
+    }
+  ]
 }

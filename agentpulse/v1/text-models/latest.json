@@ -4,5 +4,6 @@
   "benchmark_version": "1.0",
   "models_tested": 0,
   "models": [],
-  "notes": "Text model benchmarks are in development. First results expected March 2026."
+  "notes": "Text model benchmarks are in development. First results expected March 2026.",
+  "version": "1.0"
 }
