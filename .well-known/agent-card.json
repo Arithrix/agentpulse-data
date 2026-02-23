@@ -1,0 +1,33 @@
+{
+  "name": "AgentPulse",
+  "description": "Structured AI service data for agents. Pricing, uptime, and quality benchmarks for AI image generation services, updated nightly.",
+  "url": "https://data.makerpulse.ai",
+  "version": "1.0",
+  "last_updated": "2026-02-22T00:00:00Z",
+  "provider": {
+    "organization": "MakerPulse",
+    "url": "https://makerpulse.ai"
+  },
+  "capabilities": [
+    {
+      "name": "image-generation-data",
+      "description": "Pricing, uptime, and benchmark data for AI image generation services",
+      "endpoint": "/agentpulse/v1/image-generation/latest.json",
+      "method": "GET",
+      "content_type": "application/json",
+      "update_frequency": "daily"
+    },
+    {
+      "name": "change-feed",
+      "description": "Daily change feed showing pricing changes, uptime alerts, and new benchmark results",
+      "endpoint": "/agentpulse/v1/changes.json",
+      "method": "GET",
+      "content_type": "application/json",
+      "update_frequency": "daily"
+    }
+  ],
+  "categories": ["image-generation"],
+  "authentication": "none",
+  "rate_limits": "none",
+  "contact": "https://makerpulse.ai"
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentPulse - AI Service Data for Agents</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 80px 20px; }
+        h1 { font-size: 2.5rem; color: #00C8E0; margin-bottom: 0.5rem; }
+        .subtitle { font-size: 1.2rem; color: #888; margin-bottom: 3rem; }
+        h2 { font-size: 1.4rem; color: #fff; margin: 2rem 0 1rem; }
+        p { margin-bottom: 1rem; }
+        a { color: #00C8E0; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { background: #1a1a1a; padding: 2px 8px; border-radius: 4px; font-size: 0.9rem; }
+        pre { background: #1a1a1a; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
+        pre code { padding: 0; background: none; }
+        .endpoint { background: #111; border: 1px solid #222; border-radius: 8px; padding: 20px; margin: 1rem 0; }
+        .method { color: #4ade80; font-weight: bold; font-size: 0.9rem; }
+        .badge { display: inline-block; background: #00C8E0; color: #000; font-size: 0.75rem; font-weight: bold; padding: 2px 8px; border-radius: 4px; margin-left: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AgentPulse</h1>
+        <p class="subtitle">Structured AI service data for agents. By <a href="https://makerpulse.ai">MakerPulse</a>.</p>
+
+        <p>AgentPulse provides machine-readable pricing, uptime, and quality benchmark data for AI services. Designed for AI agents that need to make informed decisions about which services to use.</p>
+
+        <h2>Endpoints</h2>
+
+        <div class="endpoint">
+            <p><span class="method">GET</span> <code>/agentpulse/v1/image-generation/latest.json</code> <span class="badge">DAILY</span></p>
+            <p>Unified pricing, uptime, and benchmark data for AI image generation services.</p>
+        </div>
+
+        <div class="endpoint">
+            <p><span class="method">GET</span> <code>/agentpulse/v1/changes.json</code> <span class="badge">DAILY</span></p>
+            <p>Change feed: price changes, uptime alerts, new benchmarks from the last 30 days.</p>
+        </div>
+
+        <div class="endpoint">
+            <p><span class="method">GET</span> <code>/.well-known/agent-card.json</code></p>
+            <p>A2A-compatible agent card describing AgentPulse capabilities.</p>
+        </div>
+
+        <h2>Example</h2>
+
+        <pre><code>curl https://data.makerpulse.ai/agentpulse/v1/image-generation/latest.json</code></pre>
+
+        <h2>Currently Tracking</h2>
+        <p>Image generation services: Replicate (Flux Schnell, Flux Pro), OpenAI (DALL-E 3), Stability AI (SD 3.5), Google (Imagen 3), Black Forest Labs (Flux Pro Direct), Together AI (Flux Schnell).</p>
+
+        <h2>Status</h2>
+        <p>AgentPulse is in early access. Data is collected nightly. More service categories coming soon.</p>
+
+        <p style="margin-top: 3rem; color: #666; font-size: 0.85rem;">Built by <a href="https://makerpulse.ai">MakerPulse</a>. Free, no auth required.</p>
+    </div>
+</body>
+</html>
