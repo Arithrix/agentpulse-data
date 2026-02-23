@@ -1,11 +1,5 @@
 {
   "version": "2.0",
   "generated_at": "2026-02-23T06:00:00Z",
-  "changes": [
-    {
-      "date": "2026-02-23",
-      "type": "new_benchmark",
-      "details": "First text model benchmark run: 8 models tested across 8 providers. Top scorer: anthropic/claude-opus-4.6 at 4.45 composite."
-    }
-  ]
+  "changes": []
 }
