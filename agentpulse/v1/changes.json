@@ -1,6 +1,5 @@
 {
-  "version": "1.0",
-  "generated_at": "2026-02-22T00:00:00Z",
-  "changes": [],
-  "note": "AgentPulse change feed initializing. First entries will appear after Night 10 data collection."
+  "version": "2.0",
+  "generated_at": "2026-02-23T00:00:00Z",
+  "changes": []
 }

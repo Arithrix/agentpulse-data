@@ -1,32 +1,32 @@
 {
   "name": "AgentPulse",
-  "description": "Structured AI service data for agents. Pricing, uptime, and quality benchmarks for AI image generation services, updated nightly.",
+  "description": "AI model benchmark data for agents. Non-programmer LLM benchmarks across 21 prompts and 5 tracks, scored on 7 dimensions. Updated weekly.",
   "url": "https://data.makerpulse.ai",
-  "version": "1.0",
-  "last_updated": "2026-02-22T00:00:00Z",
+  "version": "2.0",
+  "last_updated": "2026-02-23T00:00:00Z",
   "provider": {
     "organization": "MakerPulse",
     "url": "https://makerpulse.ai"
   },
   "capabilities": [
     {
-      "name": "image-generation-data",
-      "description": "Pricing, uptime, and benchmark data for AI image generation services",
-      "endpoint": "/agentpulse/v1/image-generation/latest.json",
+      "name": "text-model-benchmarks",
+      "description": "Benchmark scores for text/LLM models on real-world non-programmer tasks. Composite scores, per-track breakdowns, hallucination rates, latency, and cost.",
+      "endpoint": "/agentpulse/v1/text-models/latest.json",
       "method": "GET",
       "content_type": "application/json",
-      "update_frequency": "daily"
+      "update_frequency": "weekly"
     },
     {
       "name": "change-feed",
-      "description": "Daily change feed showing pricing changes, uptime alerts, and new benchmark results",
+      "description": "Weekly change feed showing new models benchmarked, score updates, and deprecations",
       "endpoint": "/agentpulse/v1/changes.json",
       "method": "GET",
       "content_type": "application/json",
-      "update_frequency": "daily"
+      "update_frequency": "weekly"
     }
   ],
-  "categories": ["image-generation"],
+  "categories": ["text-models"],
   "authentication": "none",
   "rate_limits": "none",
   "contact": "https://makerpulse.ai"

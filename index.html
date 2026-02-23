@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgentPulse - AI Service Data for Agents</title>
+    <title>AgentPulse - AI Model Benchmark Data for Agents</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
@@ -25,20 +25,20 @@
 <body>
     <div class="container">
         <h1>AgentPulse</h1>
-        <p class="subtitle">Structured AI service data for agents. By <a href="https://makerpulse.ai">MakerPulse</a>.</p>
+        <p class="subtitle">AI model benchmark data for agents. By <a href="https://makerpulse.ai">MakerPulse</a>.</p>
 
-        <p>AgentPulse provides machine-readable pricing, uptime, and quality benchmark data for AI services. Designed for AI agents that need to make informed decisions about which services to use.</p>
+        <p>AgentPulse benchmarks LLMs on real-world, non-programmer tasks: writing emails, summarizing documents, planning trips, creative writing. 21 prompts across 5 tracks, scored on 7 dimensions by an independent evaluator. Updated weekly.</p>
 
         <h2>Endpoints</h2>
 
         <div class="endpoint">
-            <p><span class="method">GET</span> <code>/agentpulse/v1/image-generation/latest.json</code> <span class="badge">DAILY</span></p>
-            <p>Unified pricing, uptime, and benchmark data for AI image generation services.</p>
+            <p><span class="method">GET</span> <code>/agentpulse/v1/text-models/latest.json</code> <span class="badge">WEEKLY</span></p>
+            <p>Benchmark scores for text/LLM models. Composite scores, per-track breakdowns, hallucination rates, latency, and cost.</p>
         </div>
 
         <div class="endpoint">
-            <p><span class="method">GET</span> <code>/agentpulse/v1/changes.json</code> <span class="badge">DAILY</span></p>
-            <p>Change feed: price changes, uptime alerts, new benchmarks from the last 30 days.</p>
+            <p><span class="method">GET</span> <code>/agentpulse/v1/changes.json</code> <span class="badge">WEEKLY</span></p>
+            <p>Change feed: new models benchmarked, score updates, deprecations from the last 30 days.</p>
         </div>
 
         <div class="endpoint">
@@ -48,13 +48,20 @@
 
         <h2>Example</h2>
 
-        <pre><code>curl https://data.makerpulse.ai/agentpulse/v1/image-generation/latest.json</code></pre>
+        <pre><code>curl https://data.makerpulse.ai/agentpulse/v1/text-models/latest.json</code></pre>
 
-        <h2>Currently Tracking</h2>
-        <p>Image generation services: Replicate (Flux Schnell, Flux Pro), OpenAI (DALL-E 3), Stability AI (SD 3.5), Google (Imagen 3), Black Forest Labs (Flux Pro Direct), Together AI (Flux Schnell).</p>
+        <h2>Benchmark Tracks</h2>
+        <p><strong>Everyday Writing</strong> (4 prompts) &mdash; Customer emails, social media posts, personal correspondence</p>
+        <p><strong>Comprehension &amp; Extraction</strong> (4 prompts) &mdash; Summarization, structured data extraction, technical explanation</p>
+        <p><strong>Reasoning &amp; Planning</strong> (4 prompts) &mdash; Trip planning, decision analysis, prioritization, ethical reasoning</p>
+        <p><strong>Professional Communication</strong> (4 prompts) &mdash; Meeting notes, cover letters, incident reports, executive summaries</p>
+        <p><strong>Creativity &amp; Human-Likeness</strong> (5 prompts) &mdash; Constrained fiction, poetry, voice mimicry, sustained metaphor</p>
+
+        <h2>Scoring</h2>
+        <p>Each response is scored 1-5 on seven dimensions: instruction following, accuracy, completeness, clarity, tone, usefulness, and human-likeness. Hallucination checks flag fabricated facts. Real-world claims in certain prompts are web-verified.</p>
 
         <h2>Status</h2>
-        <p>AgentPulse is in early access. Data is collected nightly. More service categories coming soon.</p>
+        <p>AgentPulse text model benchmarks launched February 2026. New models tested every Sunday, up to 10 per week. All models accessed via OpenRouter.</p>
 
         <p style="margin-top: 3rem; color: #666; font-size: 0.85rem;">Built by <a href="https://makerpulse.ai">MakerPulse</a>. Free, no auth required.</p>
     </div>
