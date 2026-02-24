@@ -1,9 +1,9 @@
 {
   "version": "1.0",
   "category": "image-generation",
-  "updated_at": "2026-02-23T13:38:39.920083Z",
+  "updated_at": "2026-02-24T12:00:00Z",
   "data_sources": {
-    "pricing": "2026-02-23",
+    "pricing": "2026-02-24",
     "uptime": "2026-02-23"
   },
   "services": [
@@ -15,13 +15,14 @@
         "cost_per_image_usd": 0.04,
         "free_tier": null,
         "rate_limits": null,
-        "last_updated": "2026-02-23"
+        "last_updated": "2026-02-24"
       },
       "uptime": {
         "uptime_pct": 0.0,
-        "avg_latency_ms": 10417.5,
+        "avg_latency_ms": 10418,
         "checks_count": 40,
-        "last_checked": "2026-02-23T03:35:12Z"
+        "last_checked": "2026-02-23T03:35:12Z",
+        "notes": "Health check failures - likely public endpoint limitation. See BFL status page for details."
       }
     },
     {
@@ -32,11 +33,11 @@
         "cost_per_image_usd": 0.134,
         "free_tier": null,
         "rate_limits": null,
-        "last_updated": "2026-02-23"
+        "last_updated": "2026-02-24"
       },
       "uptime": {
         "uptime_pct": 100.0,
-        "avg_latency_ms": 187.3,
+        "avg_latency_ms": 187,
         "checks_count": 40,
         "last_checked": "2026-02-23T03:35:02Z"
       }
@@ -49,11 +50,11 @@
         "cost_per_image_usd": 0.04,
         "free_tier": null,
         "rate_limits": null,
-        "last_updated": "2026-02-23"
+        "last_updated": "2026-02-24"
       },
       "uptime": {
         "uptime_pct": 100.0,
-        "avg_latency_ms": 160.3,
+        "avg_latency_ms": 160,
         "checks_count": 40,
         "last_checked": "2026-02-23T03:35:02Z"
       }
@@ -63,17 +64,26 @@
       "provider": "Replicate",
       "model": "Flux Pro",
       "pricing": {
-        "cost_per_image_usd": 0.04,
+        "cost_per_image_usd": 0.055,
         "free_tier": null,
         "rate_limits": null,
-        "last_updated": "2026-02-23"
+        "last_updated": "2026-02-24"
       },
       "uptime": {
         "uptime_pct": 100.0,
-        "avg_latency_ms": 145.4,
+        "avg_latency_ms": 145,
         "checks_count": 40,
         "last_checked": "2026-02-23T03:35:02Z"
-      }
+      },
+      "price_changes": [
+        {
+          "date": "2026-02-24",
+          "previous_value": 0.04,
+          "current_value": 0.055,
+          "change_percent": 37.5,
+          "change_magnitude": "SIGNIFICANT"
+        }
+      ]
     },
     {
       "service_id": "replicate-flux-schnell",
@@ -83,11 +93,11 @@
         "cost_per_image_usd": 0.003,
         "free_tier": null,
         "rate_limits": null,
-        "last_updated": "2026-02-23"
+        "last_updated": "2026-02-24"
       },
       "uptime": {
         "uptime_pct": 100.0,
-        "avg_latency_ms": 242.9,
+        "avg_latency_ms": 243,
         "checks_count": 40,
         "last_checked": "2026-02-23T03:35:01Z"
       }
@@ -100,11 +110,11 @@
         "cost_per_image_usd": 0.065,
         "free_tier": "Community license available for self-hosting (creators/businesses <$1M/year)",
         "rate_limits": null,
-        "last_updated": "2026-02-23"
+        "last_updated": "2026-02-24"
       },
       "uptime": {
         "uptime_pct": 100.0,
-        "avg_latency_ms": 188.4,
+        "avg_latency_ms": 188,
         "checks_count": 40,
         "last_checked": "2026-02-23T03:35:02Z"
       }
@@ -115,16 +125,28 @@
       "model": "Flux Schnell",
       "pricing": {
         "cost_per_image_usd": 0.0027,
-        "free_tier": null,
+        "free_tier": "Free unlimited access for 3 months (signup required)",
         "rate_limits": null,
-        "last_updated": "2026-02-23"
+        "last_updated": "2026-02-24"
       },
       "uptime": {
         "uptime_pct": 100.0,
-        "avg_latency_ms": 289.2,
+        "avg_latency_ms": 289,
         "checks_count": 40,
         "last_checked": "2026-02-23T03:35:12Z"
       }
     }
-  ]
+  ],
+  "summary": {
+    "total_services": 7,
+    "services_100pct_uptime": 6,
+    "services_unhealthy": 1,
+    "price_range_low_usd": 0.0027,
+    "price_range_high_usd": 0.134,
+    "average_price_usd": 0.052,
+    "cheapest_service": "together-flux-schnell",
+    "most_expensive_service": "google-imagen",
+    "price_changes_detected": 1,
+    "significant_changes": 1
+  }
 }
