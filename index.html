@@ -11,6 +11,7 @@
         h1 { font-size: 2.5rem; color: #00C8E0; margin-bottom: 0.5rem; }
         .subtitle { font-size: 1.2rem; color: #888; margin-bottom: 3rem; }
         h2 { font-size: 1.4rem; color: #fff; margin: 2rem 0 1rem; }
+        h3 { font-size: 1.1rem; color: #ccc; margin: 1.5rem 0 0.5rem; }
         p { margin-bottom: 1rem; }
         a { color: #00C8E0; text-decoration: none; }
         a:hover { text-decoration: underline; }
@@ -20,6 +21,9 @@
         .endpoint { background: #111; border: 1px solid #222; border-radius: 8px; padding: 20px; margin: 1rem 0; }
         .method { color: #4ade80; font-weight: bold; font-size: 0.9rem; }
         .badge { display: inline-block; background: #00C8E0; color: #000; font-size: 0.75rem; font-weight: bold; padding: 2px 8px; border-radius: 4px; margin-left: 8px; }
+        .badge-live { background: #4ade80; }
+        .dim-list { margin: 0.5rem 0 1rem 1.5rem; }
+        .dim-list li { margin-bottom: 0.3rem; }
     </style>
 </head>
 <body>
@@ -27,18 +31,23 @@
         <h1>AgentPulse</h1>
         <p class="subtitle">AI model benchmark data for agents. By <a href="https://makerpulse.ai">MakerPulse</a>.</p>
 
-        <p>AgentPulse benchmarks LLMs on real-world, non-programmer tasks: writing emails, summarizing documents, planning trips, creative writing. 21 prompts across 5 tracks, scored on 7 dimensions by an independent evaluator. Updated weekly.</p>
+        <p>AgentPulse benchmarks frontier LLMs on real-world tasks: writing emails, summarizing documents, planning trips, creative fiction. 28 prompts across 6 tracks, evaluated by three independent AI evaluators from three different providers. Blinded, evidence-backed, with automated pre-checks for objective constraints.</p>
 
         <h2>Endpoints</h2>
 
         <div class="endpoint">
-            <p><span class="method">GET</span> <code>/agentpulse/v1/text-models/latest.json</code> <span class="badge">WEEKLY</span></p>
-            <p>Benchmark scores for text/LLM models. Composite scores, per-track breakdowns, hallucination rates, latency, and cost.</p>
+            <p><span class="method">GET</span> <code>/agentpulse/v1/text-models/latest.json</code> <span class="badge badge-live">LIVE</span></p>
+            <p>Benchmark scores for text/LLM models. Task and creative composite scores, per-track breakdowns, hallucination rates, latency, and cost.</p>
+        </div>
+
+        <div class="endpoint">
+            <p><span class="method">GET</span> <code>/agentpulse/v1/image-generation/latest.json</code> <span class="badge badge-live">LIVE</span></p>
+            <p>Image generation service pricing, uptime monitoring, and latency data across 7 providers.</p>
         </div>
 
         <div class="endpoint">
             <p><span class="method">GET</span> <code>/agentpulse/v1/changes.json</code> <span class="badge">WEEKLY</span></p>
-            <p>Change feed: new models benchmarked, score updates, deprecations from the last 30 days.</p>
+            <p>Change feed: new models benchmarked, score updates, pricing changes, deprecations from the last 30 days.</p>
         </div>
 
         <div class="endpoint">
@@ -51,18 +60,45 @@
         <pre><code>curl https://data.makerpulse.ai/agentpulse/v1/text-models/latest.json</code></pre>
 
         <h2>Benchmark Tracks</h2>
-        <p><strong>Everyday Writing</strong> (4 prompts) &mdash; Customer emails, social media posts, personal correspondence</p>
-        <p><strong>Comprehension &amp; Extraction</strong> (4 prompts) &mdash; Summarization, structured data extraction, technical explanation</p>
-        <p><strong>Reasoning &amp; Planning</strong> (4 prompts) &mdash; Trip planning, decision analysis, prioritization, ethical reasoning</p>
-        <p><strong>Professional Communication</strong> (4 prompts) &mdash; Meeting notes, cover letters, incident reports, executive summaries</p>
-        <p><strong>Creativity &amp; Human-Likeness</strong> (5 prompts) &mdash; Constrained fiction, poetry, voice mimicry, sustained metaphor</p>
+        <p><strong>Everyday Writing</strong> (P1-P4) &mdash; Professional emails, social media posts, personal correspondence</p>
+        <p><strong>Comprehension &amp; Extraction</strong> (P5-P8) &mdash; Summarization, structured data extraction, technical explanation</p>
+        <p><strong>Reasoning &amp; Planning</strong> (P9-P12) &mdash; Trip planning, decision analysis, prioritization, ethical reasoning</p>
+        <p><strong>Professional Communication</strong> (P13-P16) &mdash; Meeting notes, cover letters, incident reports, executive summaries</p>
+        <p><strong>Creativity &amp; Human-Likeness</strong> (P17-P21) &mdash; Constrained fiction, poetry, voice mimicry, sustained metaphor</p>
+        <p><strong>Creative (Open-Ended)</strong> (P22-P28) &mdash; Literary fiction, sci-fi, horror, unreliable narrator, comedy, micro-fiction</p>
 
         <h2>Scoring</h2>
-        <p>Each response is scored 1-5 on seven dimensions: instruction following, accuracy, completeness, clarity, tone, usefulness, and human-likeness. Hallucination checks flag fabricated facts. Real-world claims in certain prompts are web-verified.</p>
 
-        <h2>Status</h2>
-        <p><strong style="color: #f59e0b;">Coming Soon.</strong> AgentPulse text model benchmarks are in development. We're refining our methodology — 21 prompts, automated pre-checks, calibrated evaluation — to make sure the data is solid before we publish. First results expected March 2026.</p>
-        <p>The API endpoints above are live but currently return empty results. They'll populate once benchmarking is complete.</p>
+        <h3>Task Prompts (P1-P21) &mdash; 4 Dimensions</h3>
+        <ul class="dim-list">
+            <li><strong>Instruction Following</strong> &mdash; Did the model do what was asked, within the constraints specified?</li>
+            <li><strong>Accuracy</strong> &mdash; Factual correctness, hallucination detection</li>
+            <li><strong>Completeness</strong> &mdash; Coverage of expected elements</li>
+            <li><strong>Tone Appropriateness</strong> &mdash; Register, formality, emotional calibration</li>
+        </ul>
+
+        <h3>Creative Prompts (P22-P28) &mdash; 5 Dimensions</h3>
+        <ul class="dim-list">
+            <li><strong>Prose Craft</strong> &mdash; Sentence rhythm, word precision, sensory specificity</li>
+            <li><strong>Imagination &amp; Risk</strong> &mdash; Structural and thematic risk-taking</li>
+            <li><strong>Character &amp; Dialogue</strong> &mdash; Distinct voices, motivated behavior</li>
+            <li><strong>Emotional Architecture</strong> &mdash; Earned emotional resonance</li>
+            <li><strong>AI Tell Absence</strong> &mdash; Checklist deduction for common AI writing patterns</li>
+        </ul>
+
+        <p>All dimensions scored 1.0&ndash;5.0 in 0.1 increments. Every score requires evidence citing specific text from the response.</p>
+
+        <h2>Evaluation</h2>
+        <p>Every response is evaluated by <strong>three independent AI evaluators</strong> in parallel, blinded to model identity:</p>
+        <ul class="dim-list">
+            <li><strong>Claude Opus 4.6</strong> (Anthropic)</li>
+            <li><strong>Gemini 3.1 Pro Preview</strong> (Google)</li>
+            <li><strong>GPT-5.2</strong> (OpenAI)</li>
+        </ul>
+        <p>Scores are averaged across all three evaluators. Inter-rater reliability and self-bias detection are computed on every run. Automated pre-checks verify objective constraints (word counts, banned phrases, JSON validity) before subjective evaluation.</p>
+
+        <h2>Methodology</h2>
+        <p>Full methodology (v2.3) is published under CC-BY-4.0: <a href="https://github.com/Arithrix/agentpulse-data">github.com/Arithrix/agentpulse-data</a></p>
 
         <p style="margin-top: 3rem; color: #666; font-size: 0.85rem;">Built by <a href="https://makerpulse.ai">MakerPulse</a>. Free, no auth required.</p>
     </div>

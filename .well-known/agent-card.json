@@ -3,7 +3,7 @@
   "description": "AI model benchmark data for agents. Non-programmer LLM benchmarks across 21 prompts and 5 tracks, scored on 7 dimensions. Updated weekly.",
   "url": "https://data.makerpulse.ai",
   "version": "2.0",
-  "last_updated": "2026-02-25T14:08:30Z",
+  "last_updated": "2026-02-25T19:08:58Z",
   "provider": {
     "organization": "MakerPulse",
     "url": "https://makerpulse.ai"
