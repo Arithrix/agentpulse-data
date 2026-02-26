@@ -1,7 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T12:00:00Z",
+  "generated_at": "2026-02-26T00:00:00Z",
   "changes": [
+    {
+      "date": "2026-02-26",
+      "type": "benchmark_update",
+      "details": "Text model benchmarks v2.2 expanded to 10 models. Added Claude Sonnet 4.6, DeepSeek V3.2, Qwen3-Max, Kimi K2.5, and Gemini 3 Flash. 280 evaluations with 3-way inter-rater reliability. Gemini evaluator switched from CLI to API."
+    },
     {
       "date": "2026-02-25",
       "type": "benchmark_update",
