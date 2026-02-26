@@ -5,7 +5,7 @@
     {
       "date": "2026-02-25",
       "type": "benchmark_update",
-      "details": "Text model benchmarks v2.3 published. Triple-evaluator system (Claude Opus 4.6 + Gemini 3.1 Pro + GPT-5.2). 5 models tested across 28 prompts (21 task + 7 creative). 140 evaluations with 3-way inter-rater reliability."
+      "details": "Text model benchmarks v2.2 published. Triple-evaluator system (Claude Opus 4.6 + Gemini 3.1 Pro + GPT-5.2). 5 models tested across 28 prompts (21 task + 7 creative). 140 evaluations with 3-way inter-rater reliability."
     },
     {
       "date": "2026-02-24",

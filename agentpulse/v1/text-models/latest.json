@@ -1,7 +1,7 @@
 {
   "date": "2026-02-25",
   "category": "text-models",
-  "benchmark_version": "2.3",
+  "benchmark_version": "2.2",
   "models_tested": 5,
   "models": [
     {
@@ -20,6 +20,9 @@
         "track_creativity_constrained": 4.16
       },
       "hallucination_rate": 0.18,
+      "hallucination_count": 5,
+      "hallucination_total_prompts": 28,
+      "hallucination_prompts": [11, 13, 15, 16, 19],
       "avg_latency_ms": 30305,
       "total_cost_usd": 0.8152,
       "prompts_tested": 28,
@@ -41,6 +44,9 @@
         "track_creativity_constrained": 4.6
       },
       "hallucination_rate": 0.11,
+      "hallucination_count": 3,
+      "hallucination_total_prompts": 28,
+      "hallucination_prompts": [9, 10, 16],
       "avg_latency_ms": 68347,
       "total_cost_usd": 1.6133,
       "prompts_tested": 28,
@@ -62,6 +68,9 @@
         "track_creativity_constrained": 3.7
       },
       "hallucination_rate": 0.21,
+      "hallucination_count": 6,
+      "hallucination_total_prompts": 28,
+      "hallucination_prompts": [2, 9, 10, 13, 14, 19],
       "avg_latency_ms": 14726,
       "total_cost_usd": 0.035,
       "prompts_tested": 28,
@@ -83,6 +92,9 @@
         "track_creativity_constrained": 4.8
       },
       "hallucination_rate": 0.04,
+      "hallucination_count": 1,
+      "hallucination_total_prompts": 28,
+      "hallucination_prompts": [15],
       "avg_latency_ms": 44959,
       "total_cost_usd": 0.7377,
       "prompts_tested": 28,
@@ -104,6 +116,9 @@
         "track_creativity_constrained": 3.98
       },
       "hallucination_rate": 0.11,
+      "hallucination_count": 3,
+      "hallucination_total_prompts": 28,
+      "hallucination_prompts": [9, 11, 16],
       "avg_latency_ms": 23930,
       "total_cost_usd": 0.0202,
       "prompts_tested": 28,
