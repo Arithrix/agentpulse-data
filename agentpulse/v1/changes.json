@@ -1,11 +1,16 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-26T00:00:00Z",
+  "generated_at": "2026-02-26T09:00:00Z",
   "changes": [
     {
       "date": "2026-02-26",
       "type": "benchmark_update",
-      "details": "Text model benchmarks v2.2 expanded to 10 models. Added Claude Sonnet 4.6, DeepSeek V3.2, Qwen3-Max, Kimi K2.5, and Gemini 3 Flash. 280 evaluations with 3-way inter-rater reliability. Gemini evaluator switched from CLI to API."
+      "details": "Text model benchmarks v2.2 expanded to 10 models. Added Claude Sonnet 4.6, DeepSeek V3.2, Qwen3-Max, Kimi K2.5, and Gemini 3 Flash. 280 evaluations with 3-way inter-rater reliability (Gemini evaluator switched from CLI to API). Top scorer: GPT-5.2 (task 4.61), highest creative: Claude Sonnet 4.6 (4.04)."
+    },
+    {
+      "date": "2026-02-26",
+      "type": "pricing_update",
+      "details": "Replicate Flux Pro confirmed stable at $0.04 (live verified). Fully recovered from Feb 24-25 spike/reversal cycle. No price changes detected across all 7 services. 2 services live-verified (Replicate Schnell, Replicate Flux Pro), 5 stale due to anti-scraping blocks."
     },
     {
       "date": "2026-02-25",
