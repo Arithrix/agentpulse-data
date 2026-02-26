@@ -10,8 +10,8 @@
       "provider_tier": "tier_1",
       "task_score": 4.3,
       "task_score_ci": 0.19,
-      "creative_score": 3.99,
-      "creative_score_ci": 0.18,
+      "creative_score": 3.95,
+      "creative_score_ci": 0.27,
       "track_scores": {
         "track_everyday_writing": 4.33,
         "track_comprehension": 4.17,
