@@ -1,7 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-26T09:00:00Z",
+  "generated_at": "2026-02-28T00:15:00Z",
   "changes": [
+    {
+      "date": "2026-02-28",
+      "type": "benchmark_update",
+      "details": "Text model benchmarks v2.2 expanded study: 15 models, 3 runs per model, median aggregation. 1,260 three-way evaluations (15 models x 28 prompts x 3 runs). Added DeepSeek R1-0528, Llama 4 Maverick, Qwen3.5 Plus, GPT-5.3 Codex, GLM-5. Multi-run sampling reduces variance from sampling luck. IRR: Pearson r = 0.7133, MAD = 0.565. Top scorer: GPT-5.3 Codex (task 4.64), highest creative: GPT-5.3 Codex (4.11)."
+    },
     {
       "date": "2026-02-26",
       "type": "benchmark_update",
