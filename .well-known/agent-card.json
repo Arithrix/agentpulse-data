@@ -24,18 +24,9 @@
       "method": "GET",
       "content_type": "application/json",
       "update_frequency": "weekly"
-    },
-    {
-      "name": "image-generation-data",
-      "description": "Real-time pricing and uptime monitoring for image generation services. Includes latency metrics and health status.",
-      "endpoint": "/agentpulse/v1/image-generation/latest.json",
-      "method": "GET",
-      "content_type": "application/json",
-      "update_frequency": "daily"
     }
   ],
   "categories": [
-    "image-generation",
     "text-models"
   ],
   "authentication": "none",
